@@ -1836,7 +1836,65 @@ case "$DEVICE" in
             -e 's block/platform/soc/1da4000.ufshc/by-name/xbl_b sdc1 ' \
             "$@"
         ;;
-
+     "a5y17lte")
+        sed -i \
+            -e 's block/platform/13540000.dwmmc0/by-name/BOOT mmcblk0p10 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/BOTA0 mmcblk0p1 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/BOTA1 mmcblk0p2 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/CACHE mmcblk0p20 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/CARRIER mmcblk0p8 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/CPEFS mmcblk0p4 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/CP_DEBUG mmcblk0p22 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/DNT mmcblk0p15 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/EFS mmcblk0p3 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/HIDDEN mmcblk0p21 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/NAD_FW mmcblk0p23 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/NAD_REFER mmcblk0p24 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/OTA mmcblk0p12 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/PARAM mmcblk0p9 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/PERSISTENT mmcblk0p16 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/RADIO mmcblk0p13 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/RECOVERY mmcblk0p11 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/RESERVED2 mmcblk0p18 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/STEADY mmcblk0p17 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/SYSTEM mmcblk0p19 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/TOMBSTONES mmcblk0p14 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/USERDATA mmcblk0p25 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/VENDOR mmcblk0p26 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/m9kefs1 mmcblk0p5 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/m9kefs2 mmcblk0p6 ' \
+            -e 's block/platform/13540000.dwmmc0/by-name/m9kefs3 mmcblk0p7 ' \
+            "$@"
+        ;;
+    "grandneove3g")
+        sed -i \
+            -e 's block/platform/sprd-sdhci.3/by-name/CSC mmcblk0p22 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/FOTA_SIG mmcblk0p11 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/HIDDEN mmcblk0p24 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/KERNEL mmcblk0p20 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/MODEM mmcblk0p8 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/MODEM2 mmcblk0p9 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/PARAM mmcblk0p16 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/RECOVERY mmcblk0p21 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/RESERVED2 mmcblk0p19 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/SBOOT mmcblk0p1 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/SBOOT2 mmcblk0p2 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/TDDSP mmcblk0p10 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/WDSP mmcblk0p7 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/efs mmcblk0p17 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/prodnv mmcblk0p18 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/system mmcblk0p23 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/tdfixnv1 mmcblk0p5 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/tdfixnv2 mmcblk0p6 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/tdruntimenv1 mmcblk0p14 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/tdruntimenv2 mmcblk0p15 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/userdata mmcblk0p25 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/wfixnv1 mmcblk0p3 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/wfixnv2 mmcblk0p4 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/wruntimenv1 mmcblk0p12 ' \
+            -e 's block/platform/sprd-sdhci.3/by-name/wruntimenv2 mmcblk0p13 ' \
+            "$@"
+        ;;
     "taimen")
         sed -i \
             -e 's block/platform/soc/1da4000.ufshc/by-name/abl_a sde6 ' \
@@ -1924,4 +1982,3 @@ EOF
         exit 1
         ;;
 esac
-
