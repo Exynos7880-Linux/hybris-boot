@@ -1,13 +1,17 @@
 #! /sbin/sh
 
-FS_ARC="/data/sailfishos-rootfs.tar.bz2"
-FS_DST="/data/.stowaways/sailfishos"
+IMG_DIR="/data/.stowaways/images"
 
-rm -rf $FS_DST
-mkdir -p $FS_DST
-tar --numeric-owner -xvjf $FS_ARC -C $FS_DST
+rm -rf $IMG_DIR
+rm -rf /data/.stowaways
+mkdir -p $IMG_DIR
+mkdir -p /data/.stowaways/sailfishos
+
+mv /data/sfosrootfs.img /data/.stowaways/images/rootfs.img
+mv /data/system.img /data/.stowaways/images/
+e2fsck -fy /data/.stowaways/images/rootfs.img
+resize2fs /data/.stowaways/images/rootfs.img 8G
+
 EXIT=$?
-
-rm $FS_ARC
 
 exit $EXIT

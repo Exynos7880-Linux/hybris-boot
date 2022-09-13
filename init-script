@@ -28,6 +28,7 @@ BOOTLOGO=%BOOTLOGO%
 ALWAYSDEBUG=%ALWAYSDEBUG%
 DATA_PARTITION=%DATA_PART%
 DEFAULT_OS=%DEFAULT_OS%
+ROOTFS_IMG=/data/.stowaways/images/rootfs.img
 
 set_welcome_msg(){
 cat <<EOF > /etc/issue.net
@@ -149,6 +150,7 @@ mount_stowaways() {
 	mkdir /target
 
 	mount $DATA_PARTITION /data
+	mount -o rw ${ROOTFS_IMG} /data/${data_subdir}/.stowaways/${DEFAULT_OS}
 	mount --bind /data/${data_subdir}/.stowaways/${DEFAULT_OS} /target
 	mkdir /target/data # in new fs
 	mount --bind /data/${data_subdir} /target/data

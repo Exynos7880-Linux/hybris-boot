@@ -17,8 +17,8 @@ ui_print("");
 ui_print("Device check succeeded, mounting filesystems ...");
 mount("ext4", "EMMC", "%DATA_PART%", "/data");
 
-ui_print("Copying filesystem archive ...");
-package_extract_file("%IMAGE_FILE%", "/data/sailfishos-rootfs.tar.bz2");
+ui_print("Copying filesystem rootfs ...");
+package_extract_dir("data", "/data/");
 ui_print("Copying installation script ...");
 package_extract_file("updater-unpack.sh", "/tmp/updater-unpack.sh");
 
