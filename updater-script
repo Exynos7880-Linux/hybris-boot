@@ -18,7 +18,7 @@ ui_print("Device check succeeded, mounting filesystems ...");
 mount("ext4", "EMMC", "%DATA_PART%", "/data");
 
 ui_print("Copying filesystem rootfs ...");
-package_extract_dir("data", "/data/");
+package_extract_file("data/rootfs.img", "/data/rootfs.img");
 ui_print("Copying installation script ...");
 package_extract_file("updater-unpack.sh", "/tmp/updater-unpack.sh");
 
